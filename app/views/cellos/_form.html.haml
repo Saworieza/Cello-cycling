@@ -1,0 +1,22 @@
+= form_for @cello do |f|
+  - if @cello.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@cello.errors.count, "error")} prohibited this cello from being saved:"
+      %ul
+        - @cello.errors.full_messages.each do |message|
+          %li= message
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :phone
+    = f.text_field :phone
+  %h3 Rentals
+  #rentals
+    = f.fields_for :rentals do |rental|
+      = render 'rental_fields', f: rental
+    .links 
+      = link_to_add_association 'add rental', f, :rentals
+  .actions
+    = f.submit 'Save'

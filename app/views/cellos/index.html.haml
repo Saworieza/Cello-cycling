@@ -1,0 +1,23 @@
+%h1 Listing cellos
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Phone
+      %th
+      %th
+      %th
+
+  %tbody
+    - @cellos.each do |cello|
+      %tr
+        %td= cello.name
+        %td= cello.phone
+        %td= link_to 'Show', cello
+        %td= link_to 'Edit', edit_cello_path(cello)
+        %td= link_to 'Destroy', cello, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Cello', new_cello_path
