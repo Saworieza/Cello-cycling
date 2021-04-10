@@ -5,10 +5,10 @@
   = @payment.amount
 %p
   %b Cello:
-  = @payment.cello
+  = @payment.cello.name
 %p
   %b Rental:
-  = @payment.rental
+  = @payment.rental.bike.biketype
 
 = link_to 'Edit', edit_payment_path(@payment)
 \|

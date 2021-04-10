@@ -1,29 +1,33 @@
 %p#notice= notice
-
-%p
-  %b Name:
-  = @cello.name
-%p
-  %b Phone:
-  = @cello.phone
-
-%div.col-lg-4
-  %b Rentals 
-  %table.table.table-striped
-    %thead
-      %tr
-        %th Bike
-        %th Start
-        %th Return
-
-    %tbody
-      - @cello.rentals.each do |rental|
-        %tr
-          %td= rental.bike.biketype
-          %td= rental.start.strftime("%I:%M%p")
-          %td= rental.return.strftime("%I:%M%p") 
-     
-
 = link_to 'Edit', edit_cello_path(@cello)
 \|
 = link_to 'Back', cellos_path
+%div.row
+  %div.col-lg-4
+    %p
+      %b Name:
+      = @cello.name
+    %p
+      %b Phone:
+      = @cello.phone
+
+  %div.col-lg-4
+    %b Rentals 
+    %table.table.table-striped
+      %thead
+        %tr
+          %th Bike
+          %th Start
+          %th Return
+
+      %tbody
+        - @cello.rentals.each do |rental|
+          %tr
+            %td= rental.bike.biketype
+            %td= rental.start.strftime(" %I:%M %p : %a, %b %e")
+            %td= rental.return.strftime("%I:%M %p : %a, %b %e") 
+  
+  %div.col-lg-4
+      
+
+
