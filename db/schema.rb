@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_10_100651) do
+ActiveRecord::Schema.define(version: 2021_04_15_155759) do
 
   create_table "bikes", force: :cascade do |t|
     t.string "biketype"
@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 2021_04_10_100651) do
   end
 
   create_table "payments", force: :cascade do |t|
-    t.string "amount"
+    t.decimal "amount"
     t.integer "cello_id"
     t.integer "rental_id"
     t.datetime "created_at", null: false
