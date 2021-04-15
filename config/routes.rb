@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
+  resources :payments
   resources :rentals
   resources :bikes
-  resources :payments
   resources :cellos
   get 'home/index'
   root 'home#index'
