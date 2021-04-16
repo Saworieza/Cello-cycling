@@ -64,6 +64,6 @@ class CellosController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def cello_params
-      params.require(:cello).permit(:name, :phone, rentals_attributes: [:id, :bike_id, :start, :return, :_destroy])
+      params.require(:cello).permit(:name, :phone, rentals_attributes: [:id, :bike_id, :starttime, :returntime, :_destroy])
     end
 end

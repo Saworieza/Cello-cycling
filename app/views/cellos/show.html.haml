@@ -24,8 +24,15 @@
         - @cello.rentals.each do |rental|
           %tr
             %td= rental.bike.biketype
-            %td= rental.start.strftime(" %I:%M %p : %a, %b %e")
-            %td= rental.return.strftime("%I:%M %p : %a, %b %e") 
+            %td= rental.starttime.strftime(" %I:%M %p : %a, %b %e")
+            %td= rental.returntime.strftime("%I:%M %p : %a, %b %e") 
+            - rental.payments.each do |payment|
+              %td
+                %tr
+                  %td Payment
+                  %td= payment.amount
+                  %td= payment.created_at.strftime("%a, %b %e")
+                  %td Change Column
   
   %div.col-lg-4
       

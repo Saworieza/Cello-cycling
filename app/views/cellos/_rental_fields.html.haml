@@ -8,6 +8,6 @@
         %tbody
             %tr
                 %td= f.collection_select :bike_id, Bike.all, :id, :biketype, include_blank: true
-                %td= f.datetime_field :start
-                %td= f.datetime_field :return
+                %td= f.datetime_field :starttime
+                %td= f.datetime_field :returntime
                 %td= link_to_remove_association "remove rental", f

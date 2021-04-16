@@ -4,9 +4,7 @@ class Rental < ApplicationRecord
 
   has_many :payments
 
-  def rental_field
-    # whom was it rented to
-    # "#{adm_no}: #{first_name} #{last_name}"
-    "#{cello.name} #{start} #{return}"
+  def rental_name
+      "#{cello.name} #{starttime.strftime(" %I:%M %p : %a, %b %e")}"
   end
 end

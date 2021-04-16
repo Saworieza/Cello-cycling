@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   resources :payments
-  resources :rentals
   resources :bikes
   resources :cellos
   get 'home/index'

@@ -11,11 +11,11 @@
     = f.text_field :amount
   .field
     = f.label :cello
-    = f.collection_select :cello_id, Cello.all, :id, :name, include_blank: true
+    = f.collection_select :cello_id, Cello.order(:name), :id, :name, include_blank: true
     -# = f.text_field :cello
   .field
     = f.label :rental
-    = f.collection_select :rental_id, Rental.all, :id, :rental_field, include_blank: true
+    = f.grouped_collection_select :rental_id, Cello.order(:name), :rentals, :name, :id, :rental_name, include_blank: true
     -# = f.text_field :rental
   .actions
     = f.submit 'Save'
