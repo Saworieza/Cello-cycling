@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_16_093424) do
+ActiveRecord::Schema.define(version: 2021_04_17_051135) do
 
   create_table "bikes", force: :cascade do |t|
     t.string "biketype"
@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 2021_04_16_093424) do
   end
 
   create_table "payments", force: :cascade do |t|
-    t.string "amount"
+    t.decimal "amount"
     t.integer "cello_id"
     t.integer "rental_id"
     t.datetime "created_at", null: false
@@ -39,8 +39,8 @@ ActiveRecord::Schema.define(version: 2021_04_16_093424) do
   create_table "rentals", force: :cascade do |t|
     t.datetime "starttime"
     t.datetime "returntime"
-    t.integer "cello_id"
     t.integer "bike_id"
+    t.integer "cello_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["bike_id"], name: "index_rentals_on_bike_id"

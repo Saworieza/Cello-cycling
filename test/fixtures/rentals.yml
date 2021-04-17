@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  starttime: 2021-04-16 12:33:39
-  returntime: 2021-04-16 12:33:39
-  cello: one
+  starttime: 2021-04-17 08:10:23
+  returntime: 2021-04-17 08:10:23
   bike: one
+  cello: one
 
 two:
-  starttime: 2021-04-16 12:33:39
-  returntime: 2021-04-16 12:33:39
-  cello: two
+  starttime: 2021-04-17 08:10:23
+  returntime: 2021-04-17 08:10:23
   bike: two
+  cello: two

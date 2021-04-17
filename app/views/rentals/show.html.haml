@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Starttime:
+  = @rental.starttime
+%p
+  %b Returntime:
+  = @rental.returntime
+%p
+  %b Bike:
+  = @rental.bike
+%p
+  %b Cello:
+  = @rental.cello
+
+= link_to 'Edit', edit_rental_path(@rental)
+\|
+= link_to 'Back', rentals_path
