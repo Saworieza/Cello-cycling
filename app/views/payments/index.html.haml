@@ -3,8 +3,11 @@
 %table
   %thead
     %tr
-      %th Cello
-      %th Rental
+      %th Cello Name
+      %th Phone Number
+      %th Bike
+      %th Rented Timespan
+      %th Total Time
       %th Hourly Rate
       %th Amount Owed
       %th Amount Paid
@@ -16,7 +19,10 @@
     - @payments.each do |payment|
       %tr
         %td= payment.cello.name
+        %td= payment.cello.phone
+        %td= payment.rental.bike.biketype
         %td= payment.rental.time_gap
+        %td= payment.rental.time_diff
         %td= payment.rate
         %td= payment.amount_owed
         %td= payment.amount
