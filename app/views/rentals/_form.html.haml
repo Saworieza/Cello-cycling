@@ -7,16 +7,18 @@
           %li= message
 
   .field
+    = f.label :cello
+    = f.collection_select :cello_id, Cello.order(:name), :id, :name, include_blank: true
+    -# = f.text_field :cello
+  .field
+    = f.label :bike
+    = f.collection_select :bike_id, Bike.order(:biketype), :id, :biketype, include_blank:true
+    -# = f.text_field :bike
+  .field
     = f.label :starttime
     = f.datetime_select :starttime
   .field
     = f.label :returntime
     = f.datetime_select :returntime
-  .field
-    = f.label :bike
-    = f.text_field :bike
-  .field
-    = f.label :cello
-    = f.text_field :cello
   .actions
     = f.submit 'Save'
