@@ -7,13 +7,18 @@
           %li= message
 
   .field
-    = f.label :amount
-    = f.text_field :amount
-  .field
     = f.label :cello
-    = f.text_field :cello
+    = f.collection_select :cello_id, Cello.order(:name), :id, :name, include_blank: true 
+    -# = f.text_field :cello
   .field
     = f.label :rental
-    = f.text_field :rental
+    = f.grouped_collection_select :rental_id, Cello.order(:name), :rentals, :name, :id, :time_gap, include_blank: true
+    -# = f.text_field :rental
+  .field
+    = f.label :hourly_rate
+    = f.text_field :rate
+  .field
+    = f.label :amount_paid
+    = f.text_field :amount
   .actions
     = f.submit 'Save'

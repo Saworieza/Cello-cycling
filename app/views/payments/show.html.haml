@@ -1,14 +1,25 @@
 %p#notice= notice
 
 %p
-  %b Amount:
-  = @payment.amount
-%p
   %b Cello:
-  = @payment.cello
+  = @payment.cello.name
 %p
   %b Rental:
-  = @payment.rental
+  = @payment.rental.time_gap
+%p
+  %b Hourly Rate:
+  = @payment.rate
+%p
+  %b Amount Owed
+  = @payment.amount_owed
+  -# = TimeDifference.between(@payment.rental.returntime, @payment.rental.starttime).in_hours * @payment.rate.to_i
+%p
+  %b Amount Paid:
+  = @payment.amount
+
+%p
+  %b Balance 
+  = @payment.balance
 
 = link_to 'Edit', edit_payment_path(@payment)
 \|

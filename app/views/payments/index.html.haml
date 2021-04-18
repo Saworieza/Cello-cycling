@@ -3,19 +3,24 @@
 %table
   %thead
     %tr
-      %th Amount
       %th Cello
       %th Rental
-      %th
+      %th Hourly Rate
+      %th Amount Owed
+      %th Amount Paid
+      %th Balance
       %th
       %th
 
   %tbody
     - @payments.each do |payment|
       %tr
+        %td= payment.cello.name
+        %td= payment.rental.time_gap
+        %td= payment.rate
+        %td= payment.amount_owed
         %td= payment.amount
-        %td= payment.cello
-        %td= payment.rental
+        %td= payment.balance
         %td= link_to 'Show', payment
         %td= link_to 'Edit', edit_payment_path(payment)
         %td= link_to 'Destroy', payment, method: :delete, data: { confirm: 'Are you sure?' }

@@ -15,3 +15,10 @@
  */
 
  /* @import "bootstrap"; */
+ table{
+     border:thin solid black;
+     border-collapse: collapse;
+ }
+ table td, th{
+     border: thin solid black;
+ }

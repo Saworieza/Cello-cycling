@@ -17,7 +17,7 @@ class PaymentsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create payment" do
     assert_difference('Payment.count') do
-      post payments_url, params: { payment: { amount: @payment.amount, cello_id: @payment.cello_id, rental_id: @payment.rental_id } }
+      post payments_url, params: { payment: { amount: @payment.amount, cello_id: @payment.cello_id, rate: @payment.rate, rental_id: @payment.rental_id } }
     end
 
     assert_redirected_to payment_url(Payment.last)
@@ -34,7 +34,7 @@ class PaymentsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update payment" do
-    patch payment_url(@payment), params: { payment: { amount: @payment.amount, cello_id: @payment.cello_id, rental_id: @payment.rental_id } }
+    patch payment_url(@payment), params: { payment: { amount: @payment.amount, cello_id: @payment.cello_id, rate: @payment.rate, rental_id: @payment.rental_id } }
     assert_redirected_to payment_url(@payment)
   end
 

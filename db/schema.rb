@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_17_051135) do
+ActiveRecord::Schema.define(version: 2021_04_18_221555) do
 
   create_table "bikes", force: :cascade do |t|
     t.string "biketype"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 2021_04_17_051135) do
   end
 
   create_table "payments", force: :cascade do |t|
+    t.string "rate"
     t.decimal "amount"
     t.integer "cello_id"
     t.integer "rental_id"

@@ -3,21 +3,23 @@
 %table
   %thead
     %tr
-      %th Starttime
-      %th Returntime
-      %th Bike
       %th Cello
-      %th
-      %th
+      %th Bike
+      %th Started
+      %th Returned
+      %th Time Spent
+      %th Amount Owed
       %th
 
   %tbody
     - @rentals.each do |rental|
       %tr
-        %td= rental.starttime
-        %td= rental.returntime
-        %td= rental.bike
-        %td= rental.cello
+        %td= rental.cello.name
+        %td= rental.bike.biketype
+        %td= rental.starttime.strftime('%I:%M %p, %b %d')
+        %td= rental.returntime.strftime('%I:%M %p, %b %d')
+        %td= rental.time_diff
+        %td
         %td= link_to 'Show', rental
         %td= link_to 'Edit', edit_rental_path(rental)
         %td= link_to 'Destroy', rental, method: :delete, data: { confirm: 'Are you sure?' }

@@ -1,11 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  rate: MyString
   amount: 9.99
   cello: one
   rental: one
 
 two:
+  rate: MyString
   amount: 9.99
   cello: two
   rental: two

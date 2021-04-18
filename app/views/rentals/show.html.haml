@@ -1,10 +1,10 @@
 %p#notice= notice
 %p
-  %b Bike:
-  = @rental.bike.biketype
-%p
   %b Cello:
   = @rental.cello.name
+%p
+  %b Bike:
+  = @rental.bike.biketype
 
 %p
   %b Starttime:
@@ -12,6 +12,9 @@
 %p
   %b Returntime:
   = @rental.returntime.strftime('%I:%M %p, %b %d')
+%p
+  %b Time Diff
+  = TimeDifference.between(@rental.returntime, @rental.starttime).humanize
 
 = link_to 'Edit', edit_rental_path(@rental)
 \|

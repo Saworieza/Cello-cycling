@@ -16,6 +16,7 @@ class PaymentsTest < ApplicationSystemTestCase
 
     fill_in "Amount", with: @payment.amount
     fill_in "Cello", with: @payment.cello_id
+    fill_in "Rate", with: @payment.rate
     fill_in "Rental", with: @payment.rental_id
     click_on "Create Payment"
 
@@ -29,6 +30,7 @@ class PaymentsTest < ApplicationSystemTestCase
 
     fill_in "Amount", with: @payment.amount
     fill_in "Cello", with: @payment.cello_id
+    fill_in "Rate", with: @payment.rate
     fill_in "Rental", with: @payment.rental_id
     click_on "Update Payment"
 
