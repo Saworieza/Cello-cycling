@@ -45,6 +45,7 @@ gem "chartkick"
 gem 'chart-js-rails'
 gem 'cocoon'
 gem "best_in_place"
+gem "font-awesome-rails"
 gem 'jquery-datatables'
 
 gem 'time_difference'

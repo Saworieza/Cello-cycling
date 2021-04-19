@@ -1,24 +1,24 @@
 %h1 Listing payments
+= link_to 'New Payment', new_payment_path, class: "primary-btn small"
 
-%table
+%table.table.table-striped
   %thead
     %tr
       %th Cello Name
-      %th Phone Number
+      %th Phone 
       %th Bike
-      %th Rented Timespan
+      %th Rented Time
       %th Total Time
       %th Hourly Rate
       %th Amount Owed
       %th Amount Paid
       %th Balance
-      %th
-      %th
+      
 
   %tbody
     - @payments.each do |payment|
       %tr
-        %td= payment.cello.name
+        %td= link_to payment.cello.name, payment
         %td= payment.cello.phone
         %td= payment.rental.bike.biketype
         %td= payment.rental.time_gap
@@ -27,10 +27,9 @@
         %td= payment.amount_owed
         %td= payment.amount
         %td= payment.balance
-        %td= link_to 'Show', payment
-        %td= link_to 'Edit', edit_payment_path(payment)
-        %td= link_to 'Destroy', payment, method: :delete, data: { confirm: 'Are you sure?' }
+        -# %td= link_to 'Show', payment
+        -# %td= link_to 'Edit', edit_payment_path(payment)
+        -# %td= link_to 'Destroy', payment, method: :delete, data: { confirm: 'Are you sure?' }
 
 %br
 
-= link_to 'New Payment', new_payment_path

@@ -1,0 +1,95 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ @import "bootstrap"; 
+ @import "font-awesome";
+ 
+ a:hover{
+     text-decoration: none;
+ }
+//Fancy buttons
+.primary-btn.small {
+    letter-spacing: 1px;
+    line-height: 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    background: linear-gradient(90deg, #7c32ff 0%, #c738d8 51%, #7c32ff 100%);
+    color: #ffffff;
+    background-size: 200% auto;
+}
+.primary-btn.back {
+    letter-spacing: 1px;
+    line-height: 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    background: linear-gradient(90deg, #0f0f0f 0%, #c738d8 51%, #7c32ff 100%);
+    color: #ffffff;
+    background-size: 200% auto;
+}
+.primary-btn {
+    display: inline-block;
+    color: #415094;
+    letter-spacing: 1px;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 40px;
+    padding: 0px 20px;
+    outline: none !important;
+    text-align: center;
+    cursor: pointer;
+    text-transform: capitalize;
+    border: 0;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease 0s;
+}
+// end fancy buttons
+// Hover effect n button with class .primary-btn
+.primary-btn {
+    position: relative;
+    appearance: none;
+    // background: #f72359;
+    // padding: 1em 2em;
+    border: none;
+    color: white;
+    // font-size: 1.2em;
+    cursor: pointer;
+    outline: none;
+    overflow: hidden;
+    border-radius: 100px;
+  }
+  .primary-btn span {
+    position: relative;
+    pointer-events: none;
+  }
+  .primary-btn::before {
+    --size: 0;
+    content: '';
+    position: absolute;
+    left: var(--x);
+    top: var(--y);
+    width: var(--size);
+    height: var(--size);
+    background: radial-gradient(circle closest-side, #d5d838, transparent);
+    transform: translate(-50%, -50%);
+    transition: width 0.2s ease, height 0.2s ease;
+  }
+  .primary-btn:hover::before {
+    --size: 200px;
+  }
+  //end hover effect

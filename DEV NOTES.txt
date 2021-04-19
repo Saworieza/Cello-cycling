@@ -1,0 +1,2 @@
+DEV NOTES
+create filter in rentals for paid an unpaid using ,ath scope to determine and colorcode

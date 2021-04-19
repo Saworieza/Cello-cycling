@@ -10,12 +10,13 @@
   </head>
 
   <body class="container">
-    <nav>
-      <%= link_to "Cellos", cellos_path %>
-      <%= link_to "Bikes", bikes_path %>
-      <%= link_to 'Rentals', rentals_path %>
-      <%= link_to "Payments", payments_path %>
-    </nav>
-    <%= yield %>
+    <div class="row">
+      <div class="wrapper">
+        <%= render 'layouts/navbar' %>
+        <div id="content">
+          <%= yield %>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
