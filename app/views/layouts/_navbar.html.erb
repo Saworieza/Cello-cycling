@@ -1,49 +1,37 @@
-<div class="sidebar-header">
-    <h3>Cello Header</h3>
-</div>
-<ul class="list-unstyled components">
-    <p>Dummy Heading</p>
-    <li class="active">
-        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
-        <ul class="collapse list-unstyled" id="homeSubmenu">
-            <li>
-                <a href="#">Home 1</a>
+<div id="sidebar" class="sidebar py-3">
+    <div class="text-gray-400 text-uppercase px-3 px-lg-4 py-4 font-weight-bold small headings-font-family">MAIN</div>
+        <ul class="sidebar-menu list-unstyled">
+            <li class="sidebar-list-item">
+                <%= link_to root_path, class: "sidebar-link text-muted <%= active_class('/')" do %>
+                    <i class="o-home-1 mr-3 text-gray"></i>
+                    <span>Home</span>
+                <% end %>
             </li>
-            <li>
-                <a href="#">Home 2</a>
+            <li class="sidebar-list-item">
+                <%= link_to cellos_path, class: "sidebar-link text-muted <%= active_class('/')" do %>
+                    <i class="o-home-1 mr-3 text-gray"></i>
+                    <span>Cellos</span>
+                <% end %>
             </li>
-            <li>
-                <a href="#">Home 3</a>
+            <li class="sidebar-list-item">
+                <%= link_to rentals_path, class: "sidebar-link text-muted <%= active_class('/')" do %>
+                    <i class="o-home-1 mr-3 text-gray"></i>
+                    <span>Rentals</span>
+                <% end %>
+            </li>
+            <li class="sidebar-list-item">
+                <%= link_to bikes_path, class: "sidebar-link text-muted <%= active_class('/')" do %>
+                    <i class="o-home-1 mr-3 text-gray"></i>
+                    <span>Bikes</span>
+                <% end %>
+            </li>
+            <li class="sidebar-list-item">
+                <%= link_to payments_path, class: "sidebar-link text-muted <%= active_class('/')" do %>
+                    <i class="o-home-1 mr-3 text-gray"></i>
+                    <span>Payments</span>
+                <% end %>
             </li>
         </ul>
-    </li>
-    <li>
-        <a href="#">About</a>
-    </li>
-    <li>
-        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
-        <ul class="collapse list-unstyled" id="pageSubmenu">
-            <li>
-                <a href="#">Page 1</a>
-            </li>
-            <li>
-                <a href="#">Page 2</a>
-            </li>
-            <li>
-                <a href="#">Page 3</a>
-            </li>
-        </ul>
-    </li>
-    <li>
-        <a href="#">Portfolio</a>
-    </li>
-    <li>
-        <a href="#">Contact</a>
-    </li>
-</ul>
-    <%= link_to "Home", root_path %>
-    <%= link_to "Cellos", cellos_path %>
-    <%= link_to 'Rentals', rentals_path %>
-    <%= link_to "Bikes", bikes_path %>
-    <%= link_to "Payments", payments_path %>
-</nav>
+    </div>
+
+    

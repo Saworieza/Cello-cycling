@@ -9,11 +9,12 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body class="container">
-    <div class="row">
-      <div class="wrapper">
-        <%= render 'layouts/navbar' %>
-        <div id="content">
+  <body class="">
+    <%= render 'layouts/header' %>
+    <div class="d-flex align-items-stretch">
+      <%= render 'layouts/navbar' %>
+      <div class="page-holder w-100 d-flex flex-wrap">
+        <div class="container-fluid px-xl-5">
           <%= yield %>
         </div>
       </div>
