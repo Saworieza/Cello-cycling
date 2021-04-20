@@ -1,2 +1,3 @@
 DEV NOTES
-create filter in rentals for paid an unpaid using ,ath scope to determine and colorcode
+add ID field to cello
+create filter in rentals for paid an unpaid using path scope to determine and colorcode
